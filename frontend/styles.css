@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    background-color: hsl(218, 23%, 16%);
+    color: hsl(193, 38%, 86%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 540px;
+    position: relative;
+}
+
+.advice-card {
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.advice-header {
+    margin-bottom: 1.5rem;
+}
+
+.advice-number {
+    font-size: 0.8125rem;
+    letter-spacing: 0.25rem;
+    color: hsl(150, 100%, 66%);
+    text-transform: uppercase;
+}
+
+.advice-content {
+    margin-bottom: 2rem;
+}
+
+#advice-text {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: hsl(193, 38%, 86%);
+}
+
+.divider {
+    margin: 2rem 0 3rem;
+}
+
+.divider-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+}
+
+.dice-button {
+    position: absolute;
+    bottom: -32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 64px;
+    background-color: hsl(150, 100%, 66%);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(82, 255, 168, 0.3);
+}
+
+.dice-button:hover {
+    background-color: hsl(150, 100%, 76%);
+    box-shadow: 0 10px 25px rgba(82, 255, 168, 0.5);
+    transform: translateX(-50%) scale(1.1);
+}
+
+.dice-button:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.dice-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+/* Loading state */
+.dice-button.loading {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .advice-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    #advice-text {
+        font-size: 1.5rem;
+    }
+    
+    .advice-number {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .advice-card {
+        padding: 1.5rem 1.25rem;
+    }
+    
+    #advice-text {
+        font-size: 1.375rem;
+    }
+    
+    .dice-button {
+        width: 56px;
+        height: 56px;
+        bottom: -28px;
+    }
+    
+    .dice-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 600px;
+    }
+    
+    .advice-card {
+        padding: 3.5rem 2.5rem;
+    }
+    
+    #advice-text {
+        font-size: 2rem;
+    }
+}

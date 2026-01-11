@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advice Generator</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <div class="advice-card">
+            <div class="advice-header">
+                <span class="advice-number">ADVICE #<span id="advice-id">117</span></span>
+            </div>
+            <div class="advice-content">
+                <p id="advice-text">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</p>
+            </div>
+            <div class="divider">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="./images/pattern-divider-desktop.svg">
+                    <img src="./images/pattern-divider-mobile.svg" alt="divider" class="divider-image">
+                </picture>
+            </div>
+            <button class="dice-button" id="dice-button" aria-label="Generate new advice">
+                <img src="./images/icon-dice.svg" alt="dice icon" class="dice-icon">
+            </button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
